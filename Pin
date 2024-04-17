@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $x = ""
+        $limite = prompt("Quantos números você deseja digitar?")
+
+        document.write("<center>")
+        document.write("<font color = 'Red' size = '5'>" + " Pin " + "</font>")
+        document.write("<br><br>")
+
+        document.write("<table border = 1 width = 500>")
+        document.write("<tr>")
+        document.write("<td width= '225' align = 'center'> <b> Número </b> </td>")
+        document.write("</tr>")
+
+        for (var x = 1; x <= $limite; x++) {
+            
+            $resto = x % 4
+
+            if ($resto == 0) {
+                $status = "Pin"
+            }
+            else {
+                $status = x
+
+            }
+            document.write("<tr align = 'center'>")
+            document.write("<td width = '225'>" + $status + "</td>")
+            document.write("</tr>")
+        }
+            document.write("</table>")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
