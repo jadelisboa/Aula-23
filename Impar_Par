@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $limitef = prompt("Informe qual será o limite do seu laço de repetição: ")
+
+         document.write("<center>")
+        for (var x = 0; x <= $limitef; x++) {
+            document.write("<br> x = " + x)
+            if(x % 2 <= 0) {
+                document.write(" - Par")
+            }
+            else {
+                document.write(" - Ímpar")
+            }
+        }
+         document.write("</center>")
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
