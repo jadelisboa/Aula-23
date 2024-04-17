@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário </title>
+    <script>
+        function teste() {
+            $nome = this.form1.fNome.value;
+            $idade = this.form1.fIdade.value;
+            $sexo = this.form1.fSexo.value;
+            $cidade = this.form1.fCidade.value;
+            $estado = this.form1.fEstado.value;
+
+            $qtdcaractere_n = $nome.length;
+            $qtdcaractere_i = $idade.length
+            $qtdcaractere_s = $sexo.length
+            $qtdcaractere_c = $cidade.length
+            //$qtdcaractere_e = $estado.length
+
+            if ($qtdcaractere_n < 1) {
+                alert("Por favor, digite seu nome")
+            }
+            if ($qtdcaractere_i < 1) {
+                alert("Por favor, digite sua idade")
+            }
+            if ($qtdcaractere_c < 1) {
+                alert("Por favor, digite sua cidade")
+            }
+            if ($estado == "emBranco") {
+                alert("Por favor, digite seu Estado")
+            }
+            if (($sexo != "Masculino") && ($sexo != "Feminino"))
+            {
+                alert("Por favor, escolha seu sexo")
+            }
+
+            document.write("<center>")
+            document.write("Nome: " + $nome + "<br>" + "Idade: " + $idade + " anos" + "<br>" + "Sexo: " + $sexo + "<br>" + "Reside em: " + $cidade + "<br>" + "Cidade de: " + $estado + "<br>")
+            return false;
+            document.write("</center>")
+
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form name="form1" method="post" action="" onsubmit="return teste()">
+            <!--</form>-->
+            Nome: <input type="text" name="fNome"> <br>
+            <br>
+            Idade: <input type="text" name="fIdade"> <br>
+            <br>
+            Cidade: <input type="text" name="fCidade" size="50" maxlength="50"> <br>
+            <br>
+            Estado: <select name="fEstado">
+                <option value="emBranco">Escolha uma opção abaixo: </option>
+                <option value="AC">AC - Acre</option>
+                <option value="AL">AL - Alagoas</option>
+                <option value="AP">AP - Amapá</option>
+                <option value="AM">AM - Amazonas</option>
+                <option value="BA">BA - Bahia</option>
+                <option value="CE">CE - Ceará</option>
+                <option value="DF">DF - Distrito Federal</option>
+                <option value="ES">ES - Espírito Santo</option>
+                <option value="GO">GO - Goias</option>
+                <option value="MA">MA - Maranhão</option>
+                <option value="MT">MT - Mato Grosso</option>
+                <option value="MS">MS - Mato Grosso do Sul</option>
+                <option value="MG">MG - Minas Gerais</option>
+                <option value="PA">PA - Pará</option>
+                <option value="PB">PB - Paraíba</option>
+                <option value="PR">PR - Paraná</option>
+                <option value="PE">PE - Pernambuco</option>
+                <option value="PI">PI - Piauí</option>
+                <option value="RJ">RJ - Rio de Janeiro</option>
+                <option value="RN">RN - Rio Grande do Norte</option>
+                <option value="RS">RS - Rio Grande do Sul</option>
+                <option value="RO">RO - Rondônia</option>
+                <option value="RR">RR - Roraima</option>
+                <option value="SC">SC - Santa Catarina</option>
+                <option value="SP">SP - São Paulo</option>
+                <option value="SE">SE - Sergipe</option>
+                <option value="TO">TO - Tocantins</option>
+            </select>
+            <br> <br>
+
+
+            Sexo:
+            Masculino <input type="radio" name="fSexo" value="Masculino">
+            Feminino <input type="radio" name="fSexo" value="Feminino">
+            <br><br>
+            <input type="submit" value="Gravar">
+            <input type="reset" value="Limpar">
+
+
+
+        </form>
+    </center>
+</body>
+
+</html>
