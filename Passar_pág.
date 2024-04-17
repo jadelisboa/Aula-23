@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function teste()
+        {
+            $nomme = this.form1.fNome.value;
+
+            document.write($nomme + ", Cheguei até aqui!")
+           return false;
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form name="form1" method="post" action= "" onsubmit="return teste()">
