@@ -6,19 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+
         $limitef = prompt("Informe qual será o limite do seu laço de repetição: ")
 
-         document.write("<center>")
-        for (var x = 0; x <= $limitef; x++) {
-            document.write("<br> x = " + x)
-            if(x % 2 <= 0) {
-                document.write(" - Par")
+        document.write("<center>")
+        document.write("<font color = 'Red' size = '5'>" + "Impar ou Par? " + "</font>")
+        document.write("<br><br>")
+
+        document.write("<table border = 1 width = 500>")
+        document.write("<tr>")
+        document.write("<td width= '225' align = 'center'> <b> Número </b> </td>")
+        document.write("<td width= '110' align = 'center'> <b> Status </b> </td>")
+        document.write("</tr>")
+
+        for (var x = 0; x <= $limitef; x++) 
+        {
+            if (x % 2 <= 0) 
+            {
+                $status = "Par"                
             }
-            else {
-                document.write(" - Ímpar")
+            else 
+            {
+                $status = "Ímpar"
             }
+            document.write("<tr align = 'center'>")
+            document.write("<td width = '225'>" + x + "</td>")
+            document.write("<td width = '225'>" + $status + "</td>")
+            document.write("</tr>")
         }
-         document.write("</center>")
+        document.write("</table>")
 
     </script>
 </head>
